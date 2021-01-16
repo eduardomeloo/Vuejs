@@ -1,0 +1,4 @@
+npm i -g @vue/cli
+vue create projeto1 -> criar projeto
+Em seguida selecione preset: (Vou escolher o [Vue3] babel, eslint)
+npm install bootstrap  bootstrap-vue
