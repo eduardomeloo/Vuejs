@@ -2,3 +2,23 @@ npm i -g @vue/cli
 vue create projeto1 -> criar projeto
 Em seguida selecione preset: (Vou escolher o [Vue3] babel, eslint)
 npm install bootstrap  bootstrap-vue
+
+1 -criar pasta config dentro de src
+2 -criar arquivo bootstrap.js
+3 -configurar assim:
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
+
+Vue.use(BootstrapVue)
+
+4- fazer a chamada no main.js
+import './config/bootstrap'
+
+npm install animate.css --save
+
+Import dentro do arquivo main.js
+import 'animate.css/animate.min.css'
