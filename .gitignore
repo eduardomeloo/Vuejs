@@ -1,9 +1,10 @@
 .DS_Store
 node_modules
 /1-Fundamentos/node_modules
-/2-DIretivas/node_modules
+/2-Diretivas/node_modules
 /3-Estilizacao/node_modules
 /4-Animation/node_modules
+/5-Eventos/node_modules
 
 # local env files
 .env.local
