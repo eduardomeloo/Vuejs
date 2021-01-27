@@ -1,6 +1,8 @@
 npm i -g @vue/cli
 vue create projeto1 -> criar projeto
 Em seguida selecione preset: (Vou escolher o [Vue3] babel, eslint)
+
+---------------------------------------
 npm install bootstrap bootstrap-vue
 
 1 -criar pasta config dentro de src
@@ -17,8 +19,20 @@ Vue.use(BootstrapVue)
 
 4- fazer a chamada no main.js
 import './config/bootstrap'
-
+---------------------------------------
 npm install animate.css --save
 
 Import dentro do arquivo main.js
 import 'animate.css/animate.min.css'
+---------------------------------------
+npm install jquery popper.js
+
+importar fonte no App.vue - Style
+@import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap');
+
+---------------------------------------
+npm install vue2-filters
+
+import Vue2Filters from 'vue2-filters'
+
+Vue.use(Vue2Filters)
