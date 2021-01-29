@@ -5,10 +5,14 @@
                 v-for="notices in news" :key="notices.id"
                 :img-url="notices.img"
                 :img-info="notices.imgInfo"
-                :news-title="notices.title"
-                :news-content="notices.content"
                 :news-date="notices.date"
-            />
+            >
+                <template v-slot:title>
+                    <h2>{{ notices.title }}</h2>
+                </template>
+                <p>{{ notices.content | truncate(200)}}</p>
+            </MftSectionNewsItem>
+            
             <!-- <MftSectionNewsItem
                 img-url="news1.jpg"
                 img-info="Notícia"
