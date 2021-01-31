@@ -6,6 +6,7 @@ node_modules
 /4-Animation/node_modules
 /5-Eventos/node_modules
 /6-Components/node_modules
+/7-Vuex/node_modules
 
 # local env files
 .env.local
