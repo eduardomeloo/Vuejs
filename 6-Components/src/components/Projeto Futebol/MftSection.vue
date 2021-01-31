@@ -6,9 +6,7 @@
             </div>
         </div>
 
-        <MftSectionBanner />
-            
-        <MftSectionNews />
+        <component :is="currentComponent"></component>
 
         <div class="container">
             <div class="row my-club mt-5">
@@ -20,18 +18,20 @@
                 </div>
             </div>
         </div>
+
     </div>
 </template>
+
 <script>
 import MftSectionBanner from './MftSectionBanner'
-import MftSectionNews from './MftSectionNews'
+// import MftSectionNews from './MftSectionNews' 
 import MftInput from './MftInput'
 
 export default {
     name: 'MftSection',
     components: {
         MftSectionBanner,
-        MftSectionNews,
+        MftSectionNews: () => import('./MftSectionNews'),
         MftInput
     },
     data: () => {
@@ -40,7 +40,8 @@ export default {
         }
     },
     props: {
-        championship: String
+        championship: String,
+        currentComponent: String
     }
 }
 </script>

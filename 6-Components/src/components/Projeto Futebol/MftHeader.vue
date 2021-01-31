@@ -7,9 +7,20 @@
                     class="img d-inline-block align-top" id="logo"> Futebol Club
                 </a>
                 <div class="links mr-2">
-                    <a href="#" class="btn mr-5">Início</a>
-                    <a href="#" class="btn mr-5">Times</a>
-                    <a href="#" class="btn mr-5">Classificações</a>
+                    <a href="#" class="btn mr-5"
+                        @click.prevent="$emit('change-component','home')">
+                        Início
+                    </a>
+
+                    <a href="#" class="btn mr-5"
+                        @click.prevent="$emit('change-component','news')">
+                        Notícias
+                    </a>
+
+                    <a href="#" class="btn mr-5"
+                        @click.prevent="$emit('change-component','home')">
+                        Classificações
+                    </a>
 
                     <select name="championship" id="select-championship" 
                         class="form-control" 

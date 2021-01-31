@@ -5,8 +5,10 @@
         <ComponentGlobalOne v-if="false" text="Meu foco é TI" />
         <ComponentGlobalTwo v-if="false" />
         <ComponentLocalOne v-if="false" />
-        <MftHeader @select-championship="changeChampionship" />
-        <MftSection :championship="championship" />
+        <MftHeader @select-championship="changeChampionship"
+                   @change-component="changeComponent" />
+        <MftSection :championship="championship"
+                    :current-component="currentSectionComponent" />
         <MftFooter />
         
         
@@ -30,12 +32,27 @@ export default {
     },
     data: () => {
         return {
-            championship: 'Campeonato Brasileiro'
+            championship: 'Campeonato Brasileiro',
+            currentSectionComponent: 'MftSectionBanner'
         }
     },
     methods: {
         changeChampionship(value) {
             this.championship = value
+        },
+        changeComponent(value) {
+            
+            let component
+            switch(value) {
+                case 'home':
+                default:
+                    component = 'MftSectionBanner'
+                break
+                case 'news':
+                    component = 'MftSectionNews'
+                break
+            }
+            this.currentSectionComponent = component
         }
     }
 };
