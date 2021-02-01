@@ -7,8 +7,7 @@
         <ComponentLocalOne v-if="false" />
         <MftHeader @select-championship="changeChampionship"
                    @change-component="changeComponent" />
-        <MftSection :championship="championship"
-                    :current-component="currentSectionComponent" />
+        <MftSection :current-component="currentSectionComponent" />
         <MftFooter />
         
         

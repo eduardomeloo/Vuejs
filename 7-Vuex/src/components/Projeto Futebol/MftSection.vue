@@ -14,7 +14,7 @@
                     <h2>Seu club é: {{ myClub }}</h2>
                 </div>
                 <div class="col-6">
-                    <MftInput v-model="myClub" />
+                    <MftInput />
                 </div>
             </div>
         </div>
