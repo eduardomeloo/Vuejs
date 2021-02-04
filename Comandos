@@ -70,3 +70,34 @@ new Vue({
   store
 }).$mount('#app')
 --
+
+---------------------------------------
+
+Instalando vue-router
+
+1- npm install vue-router
+2- criar pasta router dentro de src
+3- criar um arquivo routes.js na pasta store
+
+4- Configuração inicial do arquivo routes.js
+--
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
+export default new VueRouter({
+    
+})
+--
+
+5- importando o arquivo routes.js no arquivo main.js
+--
+import router from './router/routes'
+
+new Vue({
+  render: h => h(App),
+  store,
+  router
+}).$mount('#app')
+--

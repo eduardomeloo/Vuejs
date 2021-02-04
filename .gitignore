@@ -7,6 +7,7 @@ node_modules
 /5-Eventos/node_modules
 /6-Components/node_modules
 /7-Vuex/node_modules
+/8-Router/node_modules
 
 # local env files
 .env.local
