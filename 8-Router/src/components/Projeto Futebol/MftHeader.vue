@@ -7,15 +7,13 @@
                     class="img d-inline-block align-top" id="logo"> Futebol Club
                 </a>
                 <div class="links mr-2">
-                    <a href="#" class="btn mr-5"
-                        @click.prevent="$emit('change-component','home')">
-                        Início
-                    </a>
 
-                    <a href="#" class="btn mr-5"
-                        @click.prevent="$emit('change-component','news')">
+                    <router-link class="btn mr-5" to="/" >
+                        Início
+                    </router-link>
+                    <router-link class="btn mr-5" to="/news">
                         Notícias
-                    </a>
+                    </router-link>
 
                     <a href="#" class="btn mr-5"
                         @click.prevent="$emit('change-component','home')">
@@ -63,5 +61,9 @@ export default {
     .links a:focus {
         outline: none !important;
         box-shadow: none !important;
+    }
+    .link-active {
+        background-color: #fff;
+        color: #000 !important;
     }
 </style>

@@ -6,7 +6,7 @@
             </div>
         </div>
 
-        <component :is="currentComponent"></component>
+        <router-view></router-view>
 
         <div class="container">
             <div class="row my-club mt-5">
@@ -23,7 +23,6 @@
 </template>
 
 <script>
-import MftSectionBanner from './MftSectionBanner'
 // import MftSectionNews from './MftSectionNews' 
 import MftInput from './MftInput'
 // import { mapState } from 'vuex'
@@ -32,8 +31,6 @@ import { mapGetters } from 'vuex'
 export default {
     name: 'MftSection',
     components: {
-        MftSectionBanner,
-        MftSectionNews: () => import('./MftSectionNews'),
         MftInput
     },
     data: () => {

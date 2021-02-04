@@ -7,7 +7,7 @@
         <ComponentLocalOne v-if="false" />
         <MftHeader @select-championship="changeChampionship"
                    @change-component="changeComponent" />
-        <MftSection :current-component="currentSectionComponent" />
+        <MftSection />
         <MftFooter />
         
         
@@ -33,7 +33,7 @@ export default {
     },
     data: () => {
         return {
-            currentSectionComponent: 'MftSectionBanner'
+            
         }
     },
     methods: {

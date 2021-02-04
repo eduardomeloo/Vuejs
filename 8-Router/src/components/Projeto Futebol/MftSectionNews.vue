@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="section-news">
         <div class="container">
             <MftSectionNewsItem 
                 v-for="notices in news" :key="notices.id"
@@ -8,7 +8,9 @@
                 :news-date="notices.date"
             >
                 <template v-slot:title>
-                    <h2>{{ notices.title }}</h2>
+                    <h2 @click="goToPage('/notice')">
+                        {{ notices.title }}
+                    </h2>
                 </template>
                 <p>{{ notices.content | truncate(200)}}</p>
             </MftSectionNewsItem>
@@ -40,11 +42,16 @@ export default {
         ...mapGetters({
             news: 'getNews'
         })
+    },
+    methods: {
+        goToPage(page) {
+            this.$router.push(page)
+        }
     }
 }
 </script>
-<style scoped>
-    section {
+<style>
+    .section-news {
         padding: 50px 0;
         margin-top: 25px;
         background-color: #F37520;
