@@ -8,9 +8,12 @@
                 :news-date="notices.date"
             >
                 <template v-slot:title>
-                    <h2 @click="goToPage('/notice')">
+                    <router-link :to="{name: 'notice', params: {idnotice: notices.id} }">
+                            <h2> {{ notices.title }} </h2>
+                    </router-link>
+                    <!-- <h2 @click="goToPage(`/news/${notices.id}`)">
                         {{ notices.title }}
-                    </h2>
+                    </h2> -->
                 </template>
                 <p>{{ notices.content | truncate(200)}}</p>
             </MftSectionNewsItem>
