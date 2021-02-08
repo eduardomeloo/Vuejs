@@ -13,6 +13,17 @@ Vue.config.productionTip = false
 Vue.component('ComponentGlobalOne', ComponentGlobalOne)
 Vue.component('ComponentGlobalTwo', ComponentGlobalTwo)
 
+/* Guardas globais -> Verificam as rotas de toda aplicação
+router.beforeEach((to, from, next) => {
+    console.log(to, from)
+    next()
+})
+
+router.afterEach(() => {
+    console.log('Renderização ok')
+})
+*/
+
 new Vue({
   render: h => h(App),
   store,

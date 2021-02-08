@@ -1,7 +1,7 @@
 <template>
     <section class="section-news">
         <div class="container">
-            <div class="row div-news">
+            <div class="row div-news" v-if="notice">
                 <div class="col-6">
                     <img :src="require(`@/assets/${notice.img}`)" :alt="notice.imgInfo">
                 </div>
@@ -18,12 +18,21 @@
 import Utils from '@/config/Util'
 export default {
     name: 'MftSectionNewsNotice',
+    valido: false,
     computed: {
         notice() {
             return this.$store.getters.getNewsFromId(this.$route.params.idnotice)
         }
     },
-    mixins: [Utils]
+    mixins: [Utils],
+    beforeRouteEnter: (to, from, next) => {
+        let params = to.params
+        if (!parseInt(params.idnotice) > 0) {
+            next('/')
+        } else {
+            next()
+        }
+    }
 }
 </script>
 <style scoped>
